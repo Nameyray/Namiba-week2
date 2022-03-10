@@ -79,7 +79,7 @@ function getName(event) {
               document.getElementById("smallDay").textContent = "January has maximum of 31 days, please enter the correct day"
               return false;
           }
-          else if(inputDay < 1) {
+          else if(inputDay <= 1) {
               document.getElementById("day").style.borderColor = 'red';
               document.getElementById("smallDay").textContent = "Please enter the correct day of birth, e.g 1 to 31"
               return false;
