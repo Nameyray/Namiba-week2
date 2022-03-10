@@ -47,7 +47,7 @@ function getName(event) {
           document.getElementById("smallMonth").textContent = "Please input the correct month data, e.g 1 to 12"
           return false;
       }
-      else if(inputMonth < 1) {
+      else if(inputMonth <  1) {
           document.getElementById("month").style.borderColor = 'red';
           document.getElementById("smallMonth").textContent = "Please input the correct month data, e.g 1 to 12"
           return false;
