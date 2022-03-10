@@ -24,6 +24,21 @@ function getName(event) {
      */
 
     var extDay = (((cc/4)-2*cc-1)+((5*yy/4))+((26*(mm+1)/10))+dd)%7;
+    function validateYear() {
+        if (inputYear == "") {
+            document.getElementById("year").style.borderColor = 'red';
+            document.getElementById("smallYear").textContent = "Please input year";
+            return  false;
+        }
+        else if(inputYear.length != 4) {
+            document.getElementById("year").style.borderColor = 'red';
+            document.getElementById("smallYear").textContent = "Please input the correct year pattern, e.g 2019";
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
 
 
     function getGender () {
