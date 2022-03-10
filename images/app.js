@@ -10,7 +10,7 @@ function getName(event) {
   var inputMonth = document.getElementById("month").value;
   var inputYear = document.getElementById("year").value;
   var inputCentury = document.getElementById("year").value;
-  var genders = document.getElementsByName('gender');
+  var genders = document.getElementsByName('Gender');
 
   var dd = inputDay;
   var mm = inputMonth;

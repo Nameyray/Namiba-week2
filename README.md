@@ -1,4 +1,4 @@
-# Rachel-week2
+# Rachel-week2 IP
 #### {This is a link to my week two independent project at Moringa School.}, {8th March 2022}
 #### By **{Rachel Namiba}**
 ## Description
