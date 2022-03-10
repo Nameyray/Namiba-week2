@@ -2,7 +2,7 @@ function getName(event) {
 
     event.preventDefault();
     
-    var femaleNames = ["Akosua", "Adwoa", "Abenna", "Akua", "Yaa", "Afua", "Ama"];
+   var femaleNames = ["Akosua", "Adwoa", "Abenna", "Akua", "Yaa", "Afua", "Ama"];
     var maleNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
     var weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
@@ -24,14 +24,14 @@ function getName(event) {
      */
 
     var extDay = (((cc/4)-2*cc-1)+((5*yy/4))+((26*(mm+1)/10))+dd)%7;
+
     function validateYear() {
         if (inputYear == "") {
             document.getElementById("year").style.borderColor = 'red';
             document.getElementById("smallYear").textContent = "Please input year";
             return  false;
         }
-        else if(inputYear.
-            length != 4) {
+        else if(inputYear.length != 4) {
             document.getElementById("year").style.borderColor = 'red';
             document.getElementById("smallYear").textContent = "Please input the correct year pattern, e.g 2019";
             return false;
@@ -257,6 +257,7 @@ function getName(event) {
             return true;
         }
     }
+
     function getGender () {
         for (let gender of genders){
           if (gender.checked){
@@ -266,11 +267,13 @@ function getName(event) {
       }      
 
     let genderData = getGender();
+    let yearData = validateYear();
+    let monthData = validateMonth();
+    let dayData = validateDay();
 
     var originalDay = weekDays[extDay.toFixed()];
     
-
-    if (genderData == "male") {
+    if (genderData == "male" && yearData && monthData && dayData) {
         if (originalDay === 'Sunday') {
             alert('born on a sunday your akan name is ' + maleNames[0]);
             document.getElementById("result").textContent = "Born on Sunday: Your Name is: " + maleNames[0];
@@ -306,9 +309,11 @@ function getName(event) {
             document.getElementById("result").textContent = "Born on Sunday: Your Name is: " + maleNames[6];
             return true;
         }
+        else {
+            return false;
+        }
     }
-    
-    if (genderData == "female") {
+    else if (genderData == "female" && yearData && monthData && dayData) {
         if (originalDay === 'Sunday') {
             alert('born on a sunday your akan name is ' + femaleNames[0]);
             document.getElementById("result").textContent = "Born on Sunday: Your Name is: " + femaleNames[0];
@@ -344,6 +349,12 @@ function getName(event) {
             document.getElementById("result").textContent = "Born on Sunday: Your Name is: " + femaleNames[6];
             return true;
         }
+        else {
+            return false;
+        }
     }
-    
+    else {
+        return false
+    }
+
 }
