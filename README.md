@@ -1,5 +1,5 @@
 # Rachel-week2 IP
-#### {This is a link to my week two independent project at Moringa School.}, {8th March 2022}
+#### {This is a link to my week two independent project at Moringa School.}, {10th March 2022}
 #### By **{Rachel Namiba}**
 ## Description
 {THis is a web application that allows users to enter their birth date, month and year as well as their gender. It then outputs their Akan names after calculating the actual day of the week they were born }
