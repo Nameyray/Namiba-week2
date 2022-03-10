@@ -9,7 +9,7 @@
 * run the index.html file to view the webpage 
 * Enter the required data for your birth date and gender to see your Akan name.
 ## Known Bugs
-{At the moment there are no errors but the application is not complete enough to achieve what it was intended to do.}
+{At the moment there are no errors but the application is not complete fully enough to achieve what it was intended to do.}
 ## Technologies Used
 {The application was done using HTML, CSS, Javascript and Bootstrap}
 ## Support and contact details
