@@ -30,7 +30,8 @@ function getName(event) {
             document.getElementById("smallYear").textContent = "Please input year";
             return  false;
         }
-        else if(inputYear.length != 4) {
+        else if(inputYear.
+            length != 4) {
             document.getElementById("year").style.borderColor = 'red';
             document.getElementById("smallYear").textContent = "Please input the correct year pattern, e.g 2019";
             return false;
@@ -40,7 +41,222 @@ function getName(event) {
         }
     }
 
+    function validateMonth() {
+        if (inputMonth > 12) {
+            document.getElementById("month").style.borderColor = 'red';
+            document.getElementById("smallMonth").textContent = "Please input the correct month data, e.g 1 to 12"
+            return false;
+        }
+        else if(inputMonth < 1) {
+            document.getElementById("month").style.borderColor = 'red';
+            document.getElementById("smallMonth").textContent = "Please input the correct month data, e.g 1 to 12"
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
 
+    function validateDay() {
+        if (inputYear%4 == 0 && inputMonth == 2) {
+            if (inputDay > 29) {
+                document.getElementById("day").style.borderColor = 'red';
+                document.getElementById("smallDay").textContent = "For a leap year the february days must not be more than 29days"
+                return false;
+            }
+            else if(inputDay < 1) {
+                document.getElementById("day").style.borderColor = 'red';
+                document.getElementById("smallDay").textContent = "Day must not be less than 1"
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+        else if(inputMonth == 1) {
+            if (inputDay > 31) {
+                document.getElementById("day").style.borderColor = 'red';
+                document.getElementById("smallDay").textContent = "January has maximum of 31 days, please enter the correct day"
+                return false;
+            }
+            else if(inputDay < 1) {
+                document.getElementById("day").style.borderColor = 'red';
+                document.getElementById("smallDay").textContent = "Please enter the correct day of birth, e.g 1 to 31"
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+        else if(inputMonth == 2) {
+            if (inputDay > 28) {
+                document.getElementById("day").style.borderColor = 'red';
+                document.getElementById("smallDay").textContent = "February has maximum of 28 days, please enter the correct day"
+                return false;
+            }
+            else if(inputDay < 1) {
+                document.getElementById("day").style.borderColor = 'red';
+                document.getElementById("smallDay").textContent = "Please enter the correct day of birth, e.g 1 to 28"
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+        else if(inputMonth == 3) {
+            if (inputDay > 31) {
+                document.getElementById("day").style.borderColor = 'red';
+                document.getElementById("smallDay").textContent = "March has maximum of 31 days, please enter the correct day"
+                return false;
+            }
+            else if(inputDay < 1) {
+                document.getElementById("day").style.borderColor = 'red';
+                document.getElementById("smallDay").textContent = "Please enter the correct day of birth, e.g 1 to 31"
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+        else if(inputMonth == 4) {
+            if (inputDay > 30) {
+                document.getElementById("day").style.borderColor = 'red';
+                document.getElementById("smallDay").textContent = "April has maximum of 30 days, please enter the correct day"
+                return false;
+            }
+            else if(inputDay < 1) {
+                document.getElementById("day").style.borderColor = 'red';
+                document.getElementById("smallDay").textContent = "Please enter the correct day of birth, e.g 1 to 30"
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+        else if(inputMonth == 5) {
+            if (inputDay > 31) {
+                document.getElementById("day").style.borderColor = 'red';
+                document.getElementById("smallDay").textContent = "May has maximum of 31 days, please enter the correct day"
+                return false;
+            }
+            else if(inputDay < 1) {
+                document.getElementById("day").style.borderColor = 'red';
+                document.getElementById("smallDay").textContent = "Please enter the correct day of birth, e.g 1 to 31"
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+        else if(inputMonth == 6) {
+            if (inputDay > 30) {
+                document.getElementById("day").style.borderColor = 'red';
+                document.getElementById("smallDay").textContent = "June has maximum of 30 days, please enter the correct day"
+                return false;
+            }
+            else if(inputDay < 1) {
+                document.getElementById("day").style.borderColor = 'red';
+                document.getElementById("smallDay").textContent = "Please enter the correct day of birth, e.g 1 to 30"
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+        else if(inputMonth == 7) {
+            if (inputDay > 31) {
+                document.getElementById("day").style.borderColor = 'red';
+                document.getElementById("smallDay").textContent = "July has maximum of 31 days, please enter the correct day"
+                return false;
+            }
+            else if(inputDay < 1) {
+                document.getElementById("day").style.borderColor = 'red';
+                document.getElementById("smallDay").textContent = "Please enter the correct day of birth, e.g 1 to 31"
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+        else if(inputMonth == 8) {
+            if (inputDay > 31) {
+                document.getElementById("day").style.borderColor = 'red';
+                document.getElementById("smallDay").textContent = "August has maximum of 31 days, please enter the correct day"
+                return false;
+            }
+            else if(inputDay < 1) {
+                document.getElementById("day").style.borderColor = 'red';
+                document.getElementById("smallDay").textContent = "Please enter the correct day of birth, e.g 1 to 31"
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+        else if(inputMonth == 9) {
+            if (inputDay > 30) {
+                document.getElementById("day").style.borderColor = 'red';
+                document.getElementById("smallDay").textContent = "September has maximum of 30 days, please enter the correct day"
+                return false;
+            }
+            else if(inputDay < 1) {
+                document.getElementById("day").style.borderColor = 'red';
+                document.getElementById("smallDay").textContent = "Please enter the correct day of birth, e.g 1 to 30"
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+        else if(inputMonth == 10) {
+            if (inputDay > 31) {
+                document.getElementById("day").style.borderColor = 'red';
+                document.getElementById("smallDay").textContent = "October has maximum of 31 days, please enter the correct day"
+                return false;
+            }
+            else if(inputDay < 1) {
+                document.getElementById("day").style.borderColor = 'red';
+                document.getElementById("smallDay").textContent = "Please enter the correct day of birth, e.g 1 to 31"
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+        else if(inputMonth == 11) {
+            if (inputDay > 30) {
+                document.getElementById("day").style.borderColor = 'red';
+                document.getElementById("smallDay").textContent = "November has maximum of 30 days, please enter the correct day"
+                return false;
+            }
+            else if(inputDay < 1) {
+                document.getElementById("day").style.borderColor = 'red';
+                document.getElementById("smallDay").textContent = "Please enter the correct day of birth, e.g 1 to 30"
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+        else if(inputMonth == 12) {
+            if (inputDay > 31) {
+                document.getElementById("day").style.borderColor = 'red';
+                document.getElementById("smallDay").textContent = "December has maximum of 31 days, please enter the correct day"
+                return false;
+            }
+            else if(inputDay < 1) {
+                document.getElementById("day").style.borderColor = 'red';
+                document.getElementById("smallDay").textContent = "Please enter the correct day of birth, e.g 1 to 31"
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+        else {
+            return true;
+        }
+    }
     function getGender () {
         for (let gender of genders){
           if (gender.checked){
